@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-import math
 
 class Myclass:
     x=10
 class Person:
     def __init__(self,name,age):
+        self.name = name
         self.age = age
     #def __str__(self):
         #return f"{self.name}({self.age})"
@@ -18,17 +18,19 @@ class Calculate: #length:長,weigth:寬,radius:半徑
         self.weigth = weigth
         self.radius = radius
     
-    #Calculate_area_square():計算正方形面積
+    #getSquareArea():計算正方形面積
     def getSquareArea(self):
         return int(self.square_side)*int(self.square_side)
     
-    #Calculate_area_rectangle():計算長方形
+    #getRectangleArea():計算長方形面積
     def getRectangleArea(self):
         return int(self.length)*int(self.weigth)
     
+    #getCircleArea():計算圓形面積
     def getCircleArea(self):
         ans = 3.14*int(self.radius)**2
         return ans
+        
 
 
 a = Calculate(square_side=1,length=2,weigth=3,radius=4)

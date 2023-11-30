@@ -28,7 +28,7 @@ def sort_word(word_list):#計算出現過的單字及其次數
     return 
 
 if __name__ == '__main__':
-    word = input() #word儲存使用者輸入的句子
+    word = "This is a nice day" #word儲存使用者輸入的句子
     word = word.split() #分割
     sort_word(word)
 

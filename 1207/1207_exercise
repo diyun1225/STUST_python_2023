@@ -1,3 +1,5 @@
+
+
 class Student: 
     def __init_subclass__(cls) -> None:
         pass
@@ -12,7 +14,33 @@ class Student:
         self.home = home
         self.credits = credits
         self.gpa = gpa
-        
+
+    @property
+    def get_School(self):
+        print(f'"{self.school}"was sccessed.')
+        return self.school
+    @get_School.setter
+    def get_School(self,value):
+        print(f'"{self.school}"is now "{value}".')
+        self.school = value
+    @get_School.deleter
+    def get_School(self):
+        print(f'"{self.school}" was deleted.')
+        del self.school
+
+    @property
+    def get_student_id(self):
+        print(f'"{self.student_id}"was sccessed.')
+        return self.student_id
+    @get_student_id.setter
+    def get_student_id(self,value):
+        print(f'"{self.student_id}"is now "{value}".')
+        self.student_id = value
+    @get_student_id.deleter
+    def get_student_id(self):
+        print(f'"{self.scstudent_idhool}" was deleted.')
+        del self.student_id
+"""
     # getSchool():取得就讀學校, setSchool():修改學校, new_school:輸入新學校名
     def get_School(self):
         #print(f'{self.name}來自{self.home}')
@@ -27,7 +55,7 @@ class Student:
         print("{}同學是{}系！".format(self.name,self.department))
     def set_Department(self,new_department):
         self.department = new_department
-   
+
    # getDirector_department_name():取得系主任名, setDirector_department_name():修改系主任名字, 
     def get_Director_department_name(self):
         print("{}系的系主任是{}！".format(self.name,self.Director_department_name))
@@ -35,11 +63,11 @@ class Student:
     def set_Director_department_name(self,new_Director_department_name):
         old = self.Director_department_name
         self.Director_department_name = new_Director_department_name
-        print("更改成功！系主任已從{}改為{}！".format(old,self.name))
+        print("更改成功！系主任已從{}改為{}！".format(old,self.director_department_name))
     
     # etName():取得學生姓名, setName():修改名字,
     def get_Name(self):
-        print("你好，{}同學！".format(self.name,self.department))
+        print("你好，{}同學！".format(self.name))
     # new_Name:input新名字
     def set_Name(self,new_Name):
         old = self.name
@@ -70,11 +98,17 @@ class Student:
         old = self.gpa
         self.gpa = new_gpa
         print("更改成功！{}同學的GPA從{}改為{}！".format(self.name,old,self.gpa))
-
+"""
 if __name__ == '__main__':
     studentA = Student("南臺科大","資工","洪主任","penny","4B0G0033","雲林",100,3.4)
    
-    studentA.get_Student_id()
-    studentA.set_Student_id("4B0da1111")
-    studentA.get_Student_id()
+    studentA.get_student_id
+    studentA.get_student_id = "4A9B0010"
+    print(studentA.get_student_id)
+
+    print(studentA.get_School)
+    studentA.get_School = "崑山科大"
+    print(studentA.get_School)
+
+
     

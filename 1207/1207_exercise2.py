@@ -10,6 +10,9 @@ class Sports:
     def sports_name(self,value):
         self.name = value
         print(f'已修改為"{self.name}"')
+    def practice(self):
+        print("Doing Sports pratice.")
+
 class WaterSports(Sports):
     #field :場地
     def __init__(self,name,field):
@@ -19,10 +22,12 @@ class LandSports(Sports):
     def __init__(self,name,field):
         super().__init__(name)
         self.field = field
-
+    def practice(self):
+        print("Doing Land Sports pratice.")
 if __name__ == '__main__':
     sportA = LandSports("排球", "室外")
     print(sportA.sports_name)
+    sportA.practice()
 """
 class ball(LandSports):
     def __init__(self,name):

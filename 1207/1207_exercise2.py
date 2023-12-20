@@ -28,6 +28,8 @@ if __name__ == '__main__':
     sportA = LandSports("排球", "室外")
     print(sportA.sports_name)
     sportA.practice()
+
+    
 """
 class ball(LandSports):
     def __init__(self,name):

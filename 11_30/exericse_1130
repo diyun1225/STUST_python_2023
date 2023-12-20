@@ -12,7 +12,15 @@ class Student:
         self.home = home
         self.credits = credits
         self.gpa = gpa
-        
+
+    @property
+    def get_School2(self):
+        print(f'"{self.school}"was sccessed.')
+        return self.school
+    @get_School2.setter
+    def get_School2(self,value):
+        print(f'"{self.school}"is now "{value}".')
+        self.school = value
     # getSchool():取得就讀學校, setSchool():修改學校, new_school:輸入新學校名
     def get_School(self):
         #print(f'{self.name}來自{self.home}')

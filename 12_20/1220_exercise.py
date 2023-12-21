@@ -48,15 +48,18 @@ student_filename = f"{student_id}_profile.json"
  
 # Create or load student profile
 student = Student(student_id, student_name)
+student2 = Student()
+#studend.執行副程式
+#執行constructor建構子：用來建立該類別型態物件的函式
 student.load_from_file(student_filename)
  
 # Add courses
 student.add_course("CS101", "Introduction to Computer Science", "Fall 2023")
 student.add_course("ENG201", "English Literature", "Fall 2023")
- 
+
 # Save the updated profile to file
 student.save_to_file(student_filename)
- 
+
 # Display courses for a specific semester
 semester_to_search = "Fall 2023"
 courses_taken = student.get_courses_by_semester(semester_to_search)

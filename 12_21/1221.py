@@ -4,7 +4,7 @@ import sqlite3
 from PyQt6.QtWidgets import QApplication, QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QTabWidget, QTextBrowser, QMessageBox
 from PyQt6.QtCore import Qt
 from openpyxl import Workbook
- 
+#PyQt6 python使用者介面
 class Student:
     def __init__(self, student_id, name, connection):
         self.student_id = student_id

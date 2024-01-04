@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 #南台資工飲料店：
 #Beverage:飲料
@@ -49,7 +50,7 @@ class Employee:
         print(f"員工{self.name}的年資{old_seniority}年新增{new_seniority}年後變成{self.seniority}年")
 
 if __name__ == '__main__':
-    main()
+    
     person1 = Employee("小明",2,100)
     person1.search_name()
     person1.search_seniority()

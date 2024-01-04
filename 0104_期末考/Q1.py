@@ -1,7 +1,7 @@
 #定義炸雞類別：五個屬性、定義建構子、定義三個副函式、定義四個物件、分別呼叫三個副函式
 
 #我是個網路美食家，我在網路上做了一個北中南好吃炸雞店紀錄，裡面有四個北中南評價很高的炸雞店，但有時候炸雞店的價格可能會微調
-#因此我可以去改動價格店址，使用者可以搜尋北中南部，會跳出當地的炸雞店
+#因此我可以去改動價格店址，也可以搜尋各個炸雞店的地址，也可以直接線上訂購
 
 #炸雞店：store_name:店名、address:店址、phone:訂餐電話、signature_dish:招牌餐、price:價格
 class chicken:
@@ -23,8 +23,9 @@ class chicken:
         print(f"點了 {quantity} 份{self.signature_dish}，總共 {total_price} 元")
 
      def search_store_address(self):
+        #搜尋店面地址
         print(f"{self.store_name}的位置在 {self.address}")
-        #print("{}系的系主任是{}！".format(self.name,self.Director_department_name))
+        
 
 if __name__ == '__main__':
     Napolifriedchicken = chicken("拿坡里炸雞","台北","02-25914052","脆皮炸雞",110)
